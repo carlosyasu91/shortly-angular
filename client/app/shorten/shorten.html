@@ -1,6 +1,16 @@
 <div id='container'>
-<!-- Your code here -->
-
+  <form ng-submit='addLink()'>
+    <input class='text' type='text' name='url' ng-model='linkInput'>
+    <input type='submit' value='Shorten'>
+  </form>
+  <div class='message'></div>
+  <div id='container'>
+    <div class='info'>
+      <div class='title'>{{link.title}}</div>
+      <div class='original'>{{link.url}}</div>
+      <a ></a>
+    </div>
+  </div>
 </div>
 
 

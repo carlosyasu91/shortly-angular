@@ -5,6 +5,10 @@ angular.module('shortly.auth', [])
 
 .controller('AuthController', function ($scope, $window, $location, Auth) {
   $scope.user = {};
+  
+  if($location.$$path ==='/signout'){
+    Auth.signout();
+  }
 
   $scope.signin = function () {
     Auth.signin($scope.user)
