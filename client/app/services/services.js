@@ -1,5 +1,4 @@
 angular.module('shortly.services', [])
-
 .factory('Links', function ($http) {
   // Get all saved links from db
   var getAll = function(){

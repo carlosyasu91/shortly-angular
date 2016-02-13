@@ -3,7 +3,7 @@ var crypto = require('crypto');
 
 var LinkSchema = new mongoose.Schema({
  visits: Number,
- link: String,
+ link: {type: String, unique: true},
  title: String,
  code: String,
  base_url: String,

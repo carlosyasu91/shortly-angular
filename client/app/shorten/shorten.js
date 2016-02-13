@@ -5,9 +5,11 @@ angular.module('shortly.shorten', [])
    Links.addOne({url: $scope.linkInput})
     .then(function(newLink) {
       $scope.link = newLink;
+      $scope.message = undefined;
     })
     .catch(function(err){
-      console.log(err);
+      $scope.message = err.data.error;
+      $scope.link = undefined;
     });
     $scope.linkInput = '';
   };

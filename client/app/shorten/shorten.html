@@ -1,16 +1,23 @@
 <div id='container'>
   <form ng-submit='addLink()'>
     <input class='text' type='text' name='url' ng-model='linkInput'>
-    <input type='submit' value='Shorten'>
+    <button>Shorten</button>
   </form>
-  <div class='message'></div>
-  <div id='container'>
+  
+  <div class='error' ng-if='message'>
+    {{message}}
+  </div>
+  
+  <div class='link' ng-if='link'>
+    <img src='/assets/redirect_icon.png'/>
     <div class='info'>
       <div class='title'>{{link.title}}</div>
       <div class='original'>{{link.url}}</div>
+      <a href="{{link.base_url}}/{{link.code}}">{{link.base_url + '/' + link.code}}</a>
       <a ></a>
     </div>
   </div>
+
 </div>
 
 
