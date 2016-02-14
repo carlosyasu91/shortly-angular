@@ -60,7 +60,7 @@ describe('Services', function () {
         expect(resp.status).to.equal(201);
         expect(resp.data.title).to.equal('Hack Reactor Labs');
       });
-
+      
       $httpBackend.flush();
     });
 

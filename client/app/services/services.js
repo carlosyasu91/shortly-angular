@@ -4,22 +4,21 @@ angular.module('shortly.services', [])
   var getAll = function(){
     return $http({
       method: 'GET',
-      url: '/api/links/'
+      url: '/api/links'
     })
     .then(function (resp) {
       return resp.data;
     });
   };
-
   // Post new link to db
   var addOne = function(link){
     return $http({
       method: 'POST',
-      url: '/api/links/',
+      url: '/api/links',
       data: link
     })
     .then(function (resp) {
-      return resp.data;
+      return resp;
     });
   };
   return {
